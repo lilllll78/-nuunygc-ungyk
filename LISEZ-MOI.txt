@@ -1,0 +1,57 @@
+ROSECLIENT - Mod Fabric 1.21.4 (client)
+
+Touche G : ouvre le menu (onglets ESP / AutoFarm / Build / Aide ; souris ou clavier :
+haut/bas, Entree, gauche/droite, Tab). Re-appuie sur G ou Echap pour fermer.
+Dans le menu tu actives/desactives :
+ - Chest ESP   (Orange = coffre, Rouge = piege, Violet = ender chest, Marron = tonneau)
+ - Custom ESP  : tu choisis les blocs (ancres par defaut) dans un menu avec tous les blocs et une
+   barre de recherche ; contour cyan par defaut (couleur reglable dans l'onglet Theme)
+ - Player ESP  (Rouge = joueur, Orange = joueur accroupi)
+ - Lignes (tracers)
+ - Anchor AutoFarm : va vers l'ancre la plus proche (48 blocs max) en suivant un chemin
+   (A* : contourne les obstacles, saute 1 bloc, evite eau/lave/feu), la mine, puis ramasse
+   l'item. Il faut une pioche diamant/netherite dans la hotbar.
+ - Ramassage auto : quand une ancre cassee tombe pres de toi (a la main ou non), tu marches
+   jusqu'a l'item tout seul. Appuie sur une touche de deplacement pour reprendre la main.
+ - Plus d'ancres : envoie /rtp tout seul (une fois par minute max) puis cherche plus loin.
+ - Danger : envoie /home 1 et arrete l'AutoFarm (vie <= 3 coeurs, feu/lave, gros degats,
+   ou plusieurs joueurs / monstres proches pendant 3 s).
+ - Mode humain : rotations fluides, delais de reaction, visee a un point variable,
+   petites pauses aleatoires. Desactive = rotations instantanees.
+
+BUILD (menu G -> "Build / Schemas...")
+ - Mets tes schemas (.litematic, .schem, .nbt) dans le dossier "schematics" du profil Minecraft
+   (il est cree tout seul au premier clic sur "Charger un schema").
+ - Origine : bloc vise / ma position, fleches X/Y/Z pour ajuster, rotation 0/90/180/270.
+ - Plan fantome : boite blanche = emprise, vert = bloc manquant, rouge = mauvais bloc.
+ - Construire le schema : le bot marche, prend les blocs dans l'inventaire (ou les cree en creatif)
+   et les pose de bas en haut. Les blocs orientes (escaliers, portes...) sont places au mieux.
+ - Selection : touches H (coin 1) et J (coin 2) en visant un bloc, ou boutons du menu.
+   "Remplir" pose le bloc que tu as en main, "Vider" casse tout dans la zone.
+ - STOP build pour arreter. Prevu pour le solo / creatif.
+
+INTERFACE ROSECLIENT
+ - L'ecran titre et le menu pause restent ceux de Minecraft (meme fond, meme disposition) :
+   on ajoute la rose et un bouton "RoseClient" en bas a gauche.
+ - Boutons, curseurs, champs de texte, barre d'objets et coeurs : meme relief que Minecraft,
+   recolores (violet par defaut). Un pack de textures place devant peut les masquer.
+ - Theme Sakura : boutons violets a taches avec liseré lavande et etincelles roses, barre d'objets
+   assortie ; lune, cerisiers en fleurs et petales sur l'ecran titre et le menu pause
+   (se coupe dans l'onglet Theme). Pixel art original, dans l'esprit des packs "sakura".
+ - Menu RoseClient (G ou bouton) : onglets ESP, PvP, AutoFarm, Build, Theme, Aide.
+   Chaque ligne a une description en bas de la fenetre.
+ - Onglet Theme : couleur principale (pastilles ou teinte/saturation/luminosite), opacite,
+   halo, couleurs de l'ESP (coffres, ancres, joueurs). Tout est sauvegarde automatiquement
+   dans config/roseclient.properties.
+ - Couleurs des boutons de Minecraft : mets un des packs RoseClient-Theme-*.zip dans le dossier
+   resourcepacks puis active-le dans Options > Packs de ressources (Violet, Rose, Cyan, Vert,
+   Orange, Jaune, Rouge, Blanc).
+ - Onglet PvP : HUD (FPS, CPS, coordonnees, touches, armure), sprint auto, zoom (touche C).
+
+POUR OBTENIR LE .JAR SANS RIEN INSTALLER :
+1. Crée un compte sur github.com (gratuit) puis un nouveau dépôt.
+2. Clique "uploading an existing file" et glisse TOUT le contenu de ce dossier
+   (y compris le dossier .github).
+3. Va dans l'onglet "Actions" -> attends la coche verte (2-3 min).
+4. Clique sur le dernier build -> en bas "ChestESP-jar" -> télécharge.
+5. Dézippe, mets le .jar dans .minecraft/mods avec Fabric Loader + Fabric API 1.21.4.
